@@ -1,26 +1,35 @@
-# Productivity Dashboard
+# AI Productivity Dashboard
 
 ## Overview
 
-A responsive web application for managing tasks and tracking productivity.
+An AI-enhanced productivity dashboard that helps users organize tasks, monitor progress, and receive intelligent productivity recommendations. The application combines task management, productivity analytics, priority detection, and a responsive user interface to improve daily workflow and organization.
 
 ## Features
 
-- Create tasks
-- Edit tasks
-- Delete tasks
-- Mark tasks complete
-- Productivity statistics
-- Local Storage persistence
-- Dark mode
+- Add new tasks quickly and easily
+- Edit existing tasks
+- Delete tasks when no longer needed
+- Mark tasks as completed or undo completion
+- Automatic task statistics dashboard
+  - Total Tasks
+  - Completed Tasks
+  - Pending Tasks
+- Productivity Score calculation based on task completion rate
+- AI-Powered Productivity Coach that provides smart recommendations
+- Automatic task priority detection (High Priority / Normal Priority)
+- Dark Mode toggle for improved user experience
+- Responsive design for desktop and mobile devices
+- Local Storage integration to save tasks between sessions
+- Real-time dashboard updates without page refresh
 
-## Technologies
+## Key Highlights
 
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub
+- Built using HTML, CSS, and JavaScript
+- Implements CRUD operations (Create, Read, Update, Delete)
+- Uses browser Local Storage for data persistence
+- Features AI-inspired task analysis and productivity recommendations
+- Responsive and user-friendly interface
+- Version controlled with Git and GitHub
 
 ## Live Demo
 

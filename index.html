@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productivity Dashboard</title>
+    <title>AI Productivity Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,8 +13,8 @@
     <div class="container">
 
         <header>
-            <h1>Productivity Dashboard</h1>
-            <p>Manage your daily tasks and track your productivity.</p>
+            <h1>AI Productivity Dashboard</h1>
+            <p>Manage your daily tasks and receive smart productivity insights.</p>
 
             <button id="themeBtn">
                 Toggle Dark Mode
@@ -22,6 +22,7 @@
         </header>
 
         <div class="stats">
+
             <div class="card">
                 <h3>Total Tasks</h3>
                 <span id="total">0</span>
@@ -36,9 +37,16 @@
                 <h3>Pending</h3>
                 <span id="pending">0</span>
             </div>
+
+            <div class="card">
+                <h3>Productivity Score</h3>
+                <span id="score">0%</span>
+            </div>
+
         </div>
 
         <div class="task-input">
+
             <input
                 type="text"
                 id="taskInput"
@@ -48,9 +56,20 @@
             <button onclick="addTask()">
                 Add Task
             </button>
+
         </div>
 
         <ul id="taskList"></ul>
+
+        <div class="ai-section">
+
+            <h2>AI Productivity Coach</h2>
+
+            <p id="aiAdvice">
+                Add tasks to receive productivity recommendations.
+            </p>
+
+        </div>
 
     </div>
 
