@@ -37,8 +37,9 @@ An AI-enhanced productivity dashboard that helps users organize tasks, monitor p
 
 ## Screenshots
 
-(Add screenshots here)
-
+![alt text](<DASHBOARD TRACKER.PNG>)
+![alt text](<DARK MODE PRODUCTIVITY TRACKER.PNG>)
+![alt text](<WHITE MODE PRODUCTIVITY DASHBOARD.PNG>)
 ## Future Improvements
 
 - User authentication
