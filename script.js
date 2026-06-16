@@ -1,64 +1,43 @@
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-function saveTasks(){
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+function saveTasks() {
+    localStorage.setItem(
+        "tasks",
+        JSON.stringify(tasks)
+    );
 }
 
-function renderTasks(){
+function addTask() {
 
-    const taskList = document.getElementById("taskList");
+    const input =
+        document.getElementById("taskInput");
 
-    taskList.innerHTML = "";
+    const text =
+        input.value.trim();
 
-    tasks.forEach((task,index)=>{
-
-        const li = document.createElement("li");
-
-        li.innerHTML = `
-        ${task.text}
-        <div>
-            <button onclick="toggleTask(${index})">
-                ${task.completed ? "Undo" : "Done"}
-            </button>
-
-            <button onclick="deleteTask(${index})">
-                Delete
-            </button>
-        </div>
-        `;
-
-        taskList.appendChild(li);
-
-    });
-
-    updateStats();
-    saveTasks();
-}
-
-function addTask(){
-
-    const input = document.getElementById("taskInput");
-
-    if(input.value.trim() === "") return;
+    if (text === "") {
+        alert("Please enter a task.");
+        return;
+    }
 
     tasks.push({
-        text: input.value,
-        completed:false
+        text: text,
+        completed: false
     });
 
-    input.value="";
+    input.value = "";
 
     renderTasks();
 }
 
-function deleteTask(index){
+function deleteTask(index) {
 
-    tasks.splice(index,1);
+    tasks.splice(index, 1);
 
     renderTasks();
 }
 
-function toggleTask(index){
+function toggleTask(index) {
 
     tasks[index].completed =
         !tasks[index].completed;
@@ -66,16 +45,91 @@ function toggleTask(index){
     renderTasks();
 }
 
-function updateStats(){
+function editTask(index) {
 
-    document.getElementById("total").innerText =
-        tasks.length;
+    const updatedTask = prompt(
+        "Edit Task:",
+        tasks[index].text
+    );
 
-    document.getElementById("completed").innerText =
-        tasks.filter(task=>task.completed).length;
+    if (
+        updatedTask !== null &&
+        updatedTask.trim() !== ""
+    ) {
 
-    document.getElementById("pending").innerText =
-        tasks.filter(task=>!task.completed).length;
+        tasks[index].text =
+            updatedTask.trim();
+
+        renderTasks();
+    }
 }
+
+function updateStats() {
+
+    document.getElementById("total")
+        .innerText = tasks.length;
+
+    document.getElementById("completed")
+        .innerText =
+        tasks.filter(
+            task => task.completed
+        ).length;
+
+    document.getElementById("pending")
+        .innerText =
+        tasks.filter(
+            task => !task.completed
+        ).length;
+}
+
+function renderTasks() {
+
+    const taskList =
+        document.getElementById("taskList");
+
+    taskList.innerHTML = "";
+
+    tasks.forEach((task, index) => {
+
+        const li =
+            document.createElement("li");
+
+        if (task.completed) {
+            li.classList.add("completed");
+        }
+
+        li.innerHTML = `
+            <span>${task.text}</span>
+
+            <div class="actions">
+
+                <button onclick="toggleTask(${index})">
+                    ${task.completed ? "Undo" : "Done"}
+                </button>
+
+                <button onclick="editTask(${index})">
+                    Edit
+                </button>
+
+                <button onclick="deleteTask(${index})">
+                    Delete
+                </button>
+
+            </div>
+        `;
+
+        taskList.appendChild(li);
+    });
+
+    updateStats();
+    saveTasks();
+}
+
+document
+.getElementById("themeBtn")
+.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+});
 
 renderTasks();

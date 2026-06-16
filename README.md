@@ -1,25 +1,41 @@
 # Productivity Dashboard
 
-A web-based productivity dashboard that helps users manage tasks and track progress.
+## Overview
+
+A responsive web application for managing tasks and tracking productivity.
 
 ## Features
 
-- Add tasks
+- Create tasks
+- Edit tasks
 - Delete tasks
-- Mark tasks as completed
-- Dashboard statistics
-- Local Storage support
-- Responsive design
+- Mark tasks complete
+- Productivity statistics
+- Local Storage persistence
+- Dark mode
 
-## Technologies Used
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript
+- Git
+- GitHub
 
 ## Live Demo
 
-https://princessadaobie-developer.github.io/productivity-dashboard/
+(https://princessadaobie-developer.github.io/productivity-dashboard/)
+
+## Screenshots
+
+(Add screenshots here)
+
+## Future Improvements
+
+- User authentication
+- Cloud database integration
+- Drag-and-drop task management
 
 ## Author
+
 Princess Ada

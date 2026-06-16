@@ -1,27 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productivity Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Productivity Dashboard</h1>
+    <div class="container">
 
-    <div class="stats">
-        <div>Total Tasks: <span id="total">0</span></div>
-        <div>Completed: <span id="completed">0</span></div>
-        <div>Pending: <span id="pending">0</span></div>
+        <header>
+            <h1>Productivity Dashboard</h1>
+            <p>Manage your daily tasks and track your productivity.</p>
+
+            <button id="themeBtn">
+                Toggle Dark Mode
+            </button>
+        </header>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <span id="total">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <span id="completed">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <span id="pending">0</span>
+            </div>
+        </div>
+
+        <div class="task-input">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a task..."
+            >
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+        </div>
+
+        <ul id="taskList"></ul>
+
     </div>
-
-    <div class="task-input">
-        <input type="text" id="taskInput" placeholder="Enter Task">
-        <button onclick="addTask()">Add Task</button>
-    </div>
-
-    <ul id="taskList"></ul>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
