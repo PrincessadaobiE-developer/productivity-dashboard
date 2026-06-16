@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Productivity Dashboard</h1>
+
+    <div class="stats">
+        <div>Total Tasks: <span id="total">0</span></div>
+        <div>Completed: <span id="completed">0</span></div>
+        <div>Pending: <span id="pending">0</span></div>
+    </div>
+
+    <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter Task">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
